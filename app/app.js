@@ -26,11 +26,11 @@ app.use('/', index);
 app.use('/users', users);
 
 // ====================== MongoDB ===========================
-// var mongoose = require('mongoose');
-// mongoose.Promise = global.Promise;
-// mongoose.connect('mongodb://localhost/product')
-//   .then(() =>  console.log('connection succesful'))
-//   .catch((err) => console.error(err));
+var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/product')
+  .then(() =>  console.log('connection succesful'))
+  .catch((err) => console.error(err));
 // ====================== MongoDB ===========================
 
 // catch 404 and forward to error handler
